@@ -3,6 +3,7 @@ const
     mongoose = require('mongoose')
     logger = require('morgan')
     bodyParser = require('body-parser')
+    holidayRoutes = require('.routes/holidays.js')
     PORT = 3000
 
     app.use(logger('dev'))
@@ -16,7 +17,7 @@ const
         res.json({message: "the root is on fire"})
     })
     
-    app.use('/holidays', videosRoutes)
+    app.use('/holidays', holidaysRoutes)
     
     app.listen(PORT, (err) =>{
         console.log(err || `Server running on port ${PORT}`)
