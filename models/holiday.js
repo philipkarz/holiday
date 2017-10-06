@@ -6,5 +6,4 @@ const
       religious: {type: Boolean}
   })
 
-  
 module.exports = mongoose.model('Holiday', holidaySchema)
